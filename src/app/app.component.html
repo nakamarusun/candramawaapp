@@ -1,5 +1,13 @@
-<h1>
-  Lol {{title}}
-</h1>
-<app-sidebar></app-sidebar>
+<mat-sidenav-container class="h-full">
+  <mat-sidenav class="w-40" mode="side" opened>
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <app-topbar></app-topbar>
+    <h1>
+      Lol {{title}}
+    </h1>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 <router-outlet></router-outlet>

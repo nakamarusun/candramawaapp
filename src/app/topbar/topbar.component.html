@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <input type="text"
+    placeholder="Mau sesuatu?"
+    class="px-2 rounded-lg"
+    [matAutocomplete]="auto">
+  <mat-icon class="pl-2">search</mat-icon>
+  <mat-autocomplete #auto="matAutocomplete"
+    autoActiveFirstOption>
+    <mat-option *ngFor="let autocomplete of autocompletes" [value]="autocomplete">
+      {{autocomplete}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-toolbar>
