@@ -1,13 +1,17 @@
-<div class="mb-4">
-  <img class="w-100" src="../../assets/title.svg" alt="title">
+<div class="mb-4 p-3 pt-4">
+  <img class="w-100" src="../../assets/title.svg" alt="title" />
 </div>
 
-<hr>
+<hr class="mx-3" />
 
-<div class="">
-  <a [routerLink]="" *ngFor="let menu of menus">
-    <mat-icon> {{menu.icon}} </mat-icon>
-    {{menu.name | uppercase}}
-    {{menu.href}}
-  </a>
+<div class="w-full">
+  <h5
+    class="px-3 py-1 d-flex flex-row align-items-center pointer"
+    *ngFor="let menu of menus"
+    [routerLink]="menu.href"
+    routerLinkActive="bg-warning"
+  >
+    <mat-icon class="me-2"> {{ menu.icon }} </mat-icon>
+    <span>{{ menu.name | uppercase }}</span>
+  </h5>
 </div>
