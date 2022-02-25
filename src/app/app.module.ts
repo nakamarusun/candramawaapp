@@ -11,24 +11,31 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { MenuroutingComponent } from './menurouting/menurouting.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    TopbarComponent
+    TopbarComponent,
+    NotfoundComponent,
+    MenuroutingComponent,
   ],
-  imports: [ // What components are we going to use in this project
+  imports: [
+    // What components are we going to use in this project
     BrowserModule,
     AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatButtonModule,
     MatAutocompleteModule,
     BrowserAnimationsModule,
     NgbModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

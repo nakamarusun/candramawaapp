@@ -1,7 +1,13 @@
-<h1>Xddd</h1>
+<div class="mb-4">
+  <img class="w-100" src="../../assets/title.svg" alt="title">
+</div>
 
-<div *ngFor="let menu of menus">
-  {{menu.name | uppercase}}
-  {{menu.icon}}
-  {{menu.href}}
+<hr>
+
+<div class="">
+  <a [routerLink]="" *ngFor="let menu of menus">
+    <mat-icon> {{menu.icon}} </mat-icon>
+    {{menu.name | uppercase}}
+    {{menu.href}}
+  </a>
 </div>

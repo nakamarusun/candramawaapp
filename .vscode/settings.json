@@ -1,10 +1,9 @@
 {
-  "css.styleSheets": [
-    "/node_modules/bootstrap/dist/css/bootstrap.min.css"
-  ],
   "html-css-class-completion.remoteStyleSheets": [
     "/node_modules/bootstrap/dist/css/bootstrap.min.css",
     "/src/styles.scss",
     "/src/scss/custom.scss"
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
