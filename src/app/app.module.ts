@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { MenuroutingComponent } from './menurouting/menurouting.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatAutocompleteModule,
     BrowserAnimationsModule,
     NgbModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
