@@ -2,8 +2,8 @@
   <mat-sidenav
     class="border-0 shadow-md"
     style="width: 200px"
-    mode="side"
-    opened
+    [mode]="mobileMode ? 'over' : 'side'"
+    [opened]="opened"
   >
     <app-sidebar></app-sidebar>
   </mat-sidenav>

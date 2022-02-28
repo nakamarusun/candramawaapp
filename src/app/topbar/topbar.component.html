@@ -1,4 +1,13 @@
 <mat-toolbar class="bg-light d-flex flex-row ps-4" style="height: 72px">
+  <button
+    *ngIf="isHamVisible"
+    mat-icon-button
+    class="me-2"
+    color="accent"
+    (click)="toggleSidebar()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
   <div>
     <input
       type="text"

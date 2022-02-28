@@ -15,9 +15,13 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { MenuroutingComponent } from './menurouting/menurouting.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { SizeDetectorService } from './common/size-detector.service';
+import { SizeDetectorComponent } from './common/size-detector.component';
+import { SidebarService } from './common/sidebar.service';
 
 @NgModule({
   declarations: [
+    SizeDetectorComponent,
     AppComponent,
     SidebarComponent,
     TopbarComponent,
@@ -37,7 +41,7 @@ import { MatListModule } from '@angular/material/list';
     NgbModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [SizeDetectorService, SidebarService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
