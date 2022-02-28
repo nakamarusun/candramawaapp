@@ -13,7 +13,7 @@ $custom-theme-colors: (
   gray-600: #475569,
   gray-800: #1e293b,
   gray-900: #0f172a,
-  white: #fff,
+  light: #fff,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
@@ -27,6 +27,8 @@ $utilities-text-colors: map-loop(
 );
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
+// I think the colors will be loaded in the utilities, hence why we overwrite it
+// At the top of this import
 @import "../../node_modules/bootstrap/scss/utilities";
 
 // Utilities

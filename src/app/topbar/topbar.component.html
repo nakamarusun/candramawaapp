@@ -1,11 +1,13 @@
-<mat-toolbar class="bg-white">
-  <input
-    type="text"
-    placeholder="Ingin sesuatu?"
-    class="px-2 shadow rounded-pill border-1"
-    style="border-color: #64748b"
-    [matAutocomplete]="auto"
-  />
+<mat-toolbar class="bg-light d-flex flex-row ps-4" style="height: 72px">
+  <div>
+    <input
+      type="text"
+      placeholder="Ingin sesuatu?"
+      class="px-2 w-100 shadow rounded-pill border-1"
+      style="border-color: #eee; height: 48px"
+      [matAutocomplete]="auto"
+    />
+  </div>
   <button class="ms-2" mat-icon-button color="accent">
     <mat-icon>search</mat-icon>
   </button>
