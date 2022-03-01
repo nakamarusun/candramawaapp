@@ -34,5 +34,9 @@ export class MenuroutingComponent implements OnInit {
     }
   }
 
+  closeSidebar() {
+    this.sidebarSvc.setOpened(false);
+  }
+
   ngOnInit(): void {}
 }
