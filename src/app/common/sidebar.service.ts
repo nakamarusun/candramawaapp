@@ -1,20 +1,14 @@
 import { Injectable } from '@angular/core';
-import { distinctUntilChanged, Observable, startWith, Subject } from 'rxjs';
+import { BehaviorSubject, distinctUntilChanged, Observable } from 'rxjs';
 
 @Injectable()
 export class SidebarService {
-  private opened = false;
-  // TODO: Change subject type
-  private openedSubject: Subject<boolean>;
+  // Behavior subjects stores the current value and initial value that gets sent
+  // to subscribers when they first join
+  private openedSubject: BehaviorSubject<boolean>;
 
   constructor() {
-    this.openedSubject = new Subject();
-    this.openedSubject
-      .asObservable()
-      .pipe(distinctUntilChanged())
-      .subscribe((x) => {
-        this.opened = x;
-      });
+    this.openedSubject = new BehaviorSubject<boolean>(false);
   }
 
   setOpened(isOpen: boolean) {
@@ -22,13 +16,12 @@ export class SidebarService {
   }
 
   toggleSidebar() {
-    this.openedSubject.next(!this.opened);
+    this.openedSubject.next(!this.openedSubject.getValue());
   }
 
   get isOpened$(): Observable<boolean> {
-    // Starts with ensures that when we first subscribe to this, it immediately retruens the current value
-    return this.openedSubject
-      .asObservable()
-      .pipe(distinctUntilChanged(), startWith(this.opened));
+    // startsWith from rxjs ensures that when we first subscribe to this, it immediately retruens the current value
+    // We don't need it cuz now we use behavior subject
+    return this.openedSubject.asObservable().pipe(distinctUntilChanged());
   }
 }

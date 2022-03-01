@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
-import { distinctUntilChanged, Observable, startWith, Subject } from 'rxjs';
+import {
+  BehaviorSubject,
+  distinctUntilChanged,
+  Observable,
+  startWith,
+} from 'rxjs';
 
 @Injectable()
 export class SizeDetectorService {
-  private resizeSubject: Subject<SCREEN_SIZE>;
-  private curSize = SCREEN_SIZE.XL;
+  private resizeSubject: BehaviorSubject<SCREEN_SIZE>;
 
   constructor() {
-    this.resizeSubject = new Subject();
-    this.resizeSubject
-      .asObservable()
-      .pipe(distinctUntilChanged())
-      .subscribe((size) => {
-        this.curSize = size;
-      });
+    this.resizeSubject = new BehaviorSubject<SCREEN_SIZE>(SCREEN_SIZE.XL);
   }
 
   onResize(size: SCREEN_SIZE) {
@@ -23,7 +21,7 @@ export class SizeDetectorService {
   get onResize$(): Observable<SCREEN_SIZE> {
     return this.resizeSubject
       .asObservable()
-      .pipe(distinctUntilChanged(), startWith(this.curSize));
+      .pipe(distinctUntilChanged(), startWith(this.resizeSubject.getValue()));
   }
 }
 
