@@ -4,6 +4,7 @@ import { distinctUntilChanged, Observable, startWith, Subject } from 'rxjs';
 @Injectable()
 export class SidebarService {
   private opened = false;
+  // TODO: Change subject type
   private openedSubject: Subject<boolean>;
 
   constructor() {
@@ -25,6 +26,7 @@ export class SidebarService {
   }
 
   get isOpened$(): Observable<boolean> {
+    // Starts with ensures that when we first subscribe to this, it immediately retruens the current value
     return this.openedSubject
       .asObservable()
       .pipe(distinctUntilChanged(), startWith(this.opened));

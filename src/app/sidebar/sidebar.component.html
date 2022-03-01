@@ -8,6 +8,7 @@
     *ngFor="let menu of menus"
     [routerLink]="menu.href"
     routerLinkActive="bg-warning"
+    [routerLinkActiveOptions]="{ exact: menu.name == 'Home' }"
   >
     <mat-icon class="me-2"> {{ menu.icon }} </mat-icon>
     <span>{{ menu.name }}</span>

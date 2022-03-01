@@ -12,7 +12,7 @@ export const menus: Menu[] = [
   },
   {
     name: 'Produk',
-    href: '/produk',
+    href: '/products',
     icon: 'color_lens',
   },
 ];

@@ -18,6 +18,9 @@ import { MatListModule } from '@angular/material/list';
 import { SizeDetectorService } from './common/size-detector.service';
 import { SizeDetectorComponent } from './common/size-detector.component';
 import { SidebarService } from './common/sidebar.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './menu/products/products/products.component';
+import { HomeComponent } from './menu/home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { SidebarService } from './common/sidebar.service';
     TopbarComponent,
     NotfoundComponent,
     MenuroutingComponent,
+    ProductsComponent,
+    HomeComponent,
   ],
   imports: [
     // What components are we going to use in this project
@@ -40,6 +45,7 @@ import { SidebarService } from './common/sidebar.service';
     BrowserAnimationsModule,
     NgbModule,
     MatListModule,
+    HttpClientModule,
   ],
   providers: [SizeDetectorService, SidebarService],
   bootstrap: [AppComponent],
