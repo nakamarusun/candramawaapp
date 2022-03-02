@@ -120,7 +120,12 @@ export class SearchComponent implements OnInit {
     for (let group of this._filterSearch(value)) {
       const item = group.content.find(({ name }) => value === name);
       if (item) {
-        this.router.navigateByUrl(item.url);
+        if (/^https?:\/\//.test(item.url)) {
+          window.location.href = item.url;
+        } else {
+          this.router.navigateByUrl(item.url);
+        }
+
         break;
       }
     }

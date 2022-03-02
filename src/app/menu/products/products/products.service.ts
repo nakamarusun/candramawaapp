@@ -15,6 +15,7 @@ export interface Products {
   price: number;
   rating?: number;
   image: string;
+  url: string;
 }
 
 // Urls
@@ -59,10 +60,10 @@ export class ProductsService implements SearchSource {
 
       // Populate search
       this.searchSubject.next(
-        data.map(({ name }) => {
+        data.map(({ name, url }) => {
           return {
             name,
-            url: '#',
+            url,
           };
         })
       );

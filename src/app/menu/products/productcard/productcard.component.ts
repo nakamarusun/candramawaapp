@@ -10,6 +10,7 @@ export class ProductcardComponent implements OnInit {
     name: '',
     image: '',
     price: 0,
+    url: '',
   };
 
   constructor() {}
