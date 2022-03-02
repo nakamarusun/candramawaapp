@@ -8,28 +8,5 @@
   >
     <mat-icon>menu</mat-icon>
   </button>
-  <div>
-    <input
-      type="text"
-      placeholder="Ingin sesuatu?"
-      class="px-2 w-100 shadow rounded-pill border-1"
-      style="border-color: #eee; height: 48px"
-      [matAutocomplete]="auto"
-    />
-  </div>
-  <button class="ms-2" mat-icon-button color="accent">
-    <mat-icon>search</mat-icon>
-  </button>
-  <mat-autocomplete
-    class="rounded-3"
-    #auto="matAutocomplete"
-    autoActiveFirstOption
-  >
-    <mat-option
-      *ngFor="let autocomplete of autocompletes"
-      [value]="autocomplete"
-    >
-      {{ autocomplete }}
-    </mat-option>
-  </mat-autocomplete>
+  <app-search></app-search>
 </mat-toolbar>

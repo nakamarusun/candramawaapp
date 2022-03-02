@@ -14,7 +14,6 @@ export class ProductsComponent implements OnInit {
       switch (x.status) {
         case PayloadStatus.GETTING: {
           // TODO: Display spinner
-          console.log('Loading');
           break;
         }
         case PayloadStatus.SUCCESS: {

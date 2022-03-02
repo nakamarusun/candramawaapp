@@ -10,10 +10,7 @@ import {
   templateUrl: './topbar.component.html',
 })
 export class TopbarComponent implements OnInit {
-  autocompletes: string[] = ['produk', 'home', 'setting'];
-
   isHamVisible = false;
-  // TODO: Close sidenav from clicking outside does not change state
 
   constructor(
     private resizeSvc: SizeDetectorService,

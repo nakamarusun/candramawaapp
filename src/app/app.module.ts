@@ -21,6 +21,9 @@ import { SidebarService } from './common/sidebar.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './menu/products/products/products.component';
 import { HomeComponent } from './menu/home/home/home.component';
+import { SearchComponent } from './topbar/search/search.component';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { HomeComponent } from './menu/home/home/home.component';
     MenuroutingComponent,
     ProductsComponent,
     HomeComponent,
+    SearchComponent,
   ],
   imports: [
     // What components are we going to use in this project
@@ -46,6 +50,8 @@ import { HomeComponent } from './menu/home/home/home.component';
     NgbModule,
     MatListModule,
     HttpClientModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [SizeDetectorService, SidebarService],
   bootstrap: [AppComponent],
