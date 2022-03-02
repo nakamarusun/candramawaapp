@@ -11,7 +11,12 @@
       (keydown.enter)="search(inputSearch.value)"
     />
   </div>
-  <button class="ms-2" mat-icon-button color="accent">
+  <button
+    (click)="search(inputSearch.value)"
+    class="ms-2"
+    mat-icon-button
+    color="accent"
+  >
     <mat-icon>search</mat-icon>
   </button>
   <mat-autocomplete

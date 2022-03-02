@@ -1,17 +1,15 @@
-<div class="">
-  <a
-    class="h-100 border shadow rounded-4 d-flex flex-column list-group-item-action"
-    routerLink=""
-  >
-    <div class="w-100 position-relative" style="padding-top: 100%">
-      <img
-        class="position-absolute top-0 w-100 h-100 rounded-4"
-        [src]="product.image"
-      />
-    </div>
-    <div class="p-2 p-lg-3">
-      <h4 class="text-gray-800 fw-bold">{{ product.name }}</h4>
-      <h5 class="text-gray-600">{{ product.price | currency: "IDR" }}</h5>
-    </div>
-  </a>
-</div>
+<a
+  class="h-100 border shadow rounded-4 d-flex flex-column list-group-item-action"
+  routerLink=""
+>
+  <div class="w-100 position-relative" style="padding-top: 100%">
+    <img
+      class="position-absolute top-0 w-100 h-100 rounded-4"
+      [src]="product.image"
+    />
+  </div>
+  <div class="p-2 p-lg-3">
+    <h4 class="text-gray-800 fw-bold">{{ product.name }}</h4>
+    <h5 class="text-gray-600">{{ product.price | currency: "IDR" }}</h5>
+  </div>
+</a>
