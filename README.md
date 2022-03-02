@@ -1,6 +1,6 @@
 # Candramawaapp
 
-[Project Link](https://candramawa-app.web.app)
+[Project Link](https://seni-candramawa.web.app/)
 
 Technology Used:
 
