@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { map, Observable, startWith } from 'rxjs';
 import {
   SearchObservable,
@@ -12,7 +13,7 @@ import { ProductsService } from 'src/app/menu/products/products/products.service
 // terms that will appear in the search bar. Later,
 interface ObservableSearcher {
   [sectionName: string]: {
-    source: SearchObservable;
+    source?: SearchObservable;
     contents: SearchStruct[];
   };
 }
@@ -53,12 +54,16 @@ export class SearchComponent implements OnInit {
   ];
 
   // We'll get all the search terms from other services with this array
-  searchSources: ObservableSearcher = {};
+  searchSources: ObservableSearcher = {
+    'QuickGo!': {
+      contents: this.initialAuto[0].content,
+    },
+  };
 
   // Observable to be inserted into the HTML
   searchGroupOptions: Observable<SearchGroup[]>;
 
-  constructor(private productSvc: ProductsService) {
+  constructor(private productSvc: ProductsService, private router: Router) {
     // Fill search sources here
     const searchSources: SearchSource[] = [productSvc];
 
@@ -97,16 +102,28 @@ export class SearchComponent implements OnInit {
       return this.initialAuto;
     }
 
+    const lowerValue = value.toLowerCase();
+
     // TODO: Maybe implement counter?
     let counter = 0;
     return Object.entries(this.searchSources)
       .map(([key, val]) => ({
         group: key,
         content: val.contents.filter(({ name }) =>
-          name.toLowerCase().includes(value.toLowerCase())
+          name.toLowerCase().includes(lowerValue)
         ),
       }))
       .filter(({ content }) => content.length > 0);
+  }
+
+  search(value: string) {
+    for (let group of this._filterSearch(value)) {
+      const item = group.content.find(({ name }) => value === name);
+      if (item) {
+        this.router.navigateByUrl(item.url);
+        break;
+      }
+    }
   }
 
   ngOnInit(): void {

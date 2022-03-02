@@ -6,7 +6,9 @@
       class="px-3 shadow rounded-pill border-1"
       [matAutocomplete]="auto"
       matInput
+      #inputSearch
       [formControl]="searchForm"
+      (keydown.enter)="search(inputSearch.value)"
     />
   </div>
   <button class="ms-2" mat-icon-button color="accent">
