@@ -29,6 +29,7 @@ const MAX_RESULT = 4;
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
+  styleUrls: ['search.component.scss'],
 })
 export class SearchComponent implements OnInit {
   // Detect changes in the search bar

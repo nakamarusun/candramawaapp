@@ -2,12 +2,15 @@
 @import "/node_modules/bootstrap/scss/variables";
 @import "/node_modules/bootstrap/scss/mixins";
 
-.sidenav {
-  width: 150px;
+input {
+  font-size: 14px;
+  border-color: #eee;
+  height: 48px;
+  width: 100%;
 }
 
 @include media-breakpoint-up(md) {
-  .sidenav {
-    width: 200px;
+  input {
+    width: 400px;
   }
 }

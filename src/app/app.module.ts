@@ -24,6 +24,7 @@ import { HomeComponent } from './menu/home/home/home.component';
 import { SearchComponent } from './topbar/search/search.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductcardComponent } from './menu/products/productcard/productcard.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductsComponent,
     HomeComponent,
     SearchComponent,
+    ProductcardComponent,
   ],
   imports: [
     // What components are we going to use in this project
