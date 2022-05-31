@@ -1,6 +1,13 @@
-@import "/node_modules/bootstrap/scss/functions";
-@import "/node_modules/bootstrap/scss/variables";
-@import "/node_modules/bootstrap/scss/mixins";
+// CORE FUNCTIONS
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/functions";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/functions";
+
+// CORE VARIABLES
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/variables";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/variables";
+
+// BOOTSTRAP CORE
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/mixins";
 
 // Why bootstrap like this man 😭
 // Have to delacre with all these things
@@ -26,10 +33,10 @@ $utilities-text-colors: map-loop(
   "text"
 );
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
-
 // I think the colors will be loaded in the utilities, hence why we overwrite it
 // At the top of this import
-@import "../../node_modules/bootstrap/scss/utilities";
+
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/utilities";
 
 // Utilities
 $utilities: map-merge(
@@ -67,7 +74,95 @@ $utilities: map-merge(
   )
 );
 
-// Very important but not mentioned in the docs. To extend, this must be placed
-// at the end.
-// https://stackoverflow.com/questions/65376233/add-new-utilities-with-bootstrap-5
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// BOOTSTRAP CORE COMPONENTS
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/root";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/reboot";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/type";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/images";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/containers";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/grid";
+
+// BOOTSTRAP COMPONENTS
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/accordion";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/tables";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/forms";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/buttons";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/transitions";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/dropdown";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/button-group";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/nav";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/navbar";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/card";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/breadcrumb";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/pagination";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/badge";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/alert";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/progress";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/placeholders";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/list-group";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/close";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/toasts";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/modal";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/tooltip";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/popover";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/carousel";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/spinners";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/offcanvas";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/tooltip";
+
+// Helpers
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/helpers";
+
+// Utilities
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/utilities";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/bootstrap/utilities/api";
+
+// MDB CORE
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/mixins";
+
+// MDB CORE COMPONENTS
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/root";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/reboot";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/type";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/colors";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/shadows";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/flag";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/images";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/overlay";
+
+// MDB COMPONENTS
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/accordion";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/tables";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/buttons";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/deprecated";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/button-group";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/nav";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/navbar";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/card";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/carousel";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/breadcrumb";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/pagination";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/badge";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/progress";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/list-group";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/close";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/tooltip";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/popover";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/modal";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/dropdown";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/ripple";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/validation";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/scrollspy";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/range";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/alert";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/toasts";
+
+// MDB FORMS
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/forms/form-check";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/forms/form-control";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/forms/form-select";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/forms/form-range";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/forms/input-group";
+@import "../../node_modules/mdb-angular-ui-kit/assets/scss/free/forms/form-file";
+
+@import "~@angular/cdk/overlay-prebuilt.css";

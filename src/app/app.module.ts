@@ -25,6 +25,8 @@ import { SearchComponent } from './topbar/search/search.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductcardComponent } from './menu/products/productcard/productcard.component';
+import { ProfileComponent } from './topbar/profile/profile.component';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { ProductcardComponent } from './menu/products/productcard/productcard.co
     HomeComponent,
     SearchComponent,
     ProductcardComponent,
+    ProfileComponent,
   ],
   imports: [
     // What components are we going to use in this project
@@ -54,6 +57,7 @@ import { ProductcardComponent } from './menu/products/productcard/productcard.co
     HttpClientModule,
     MatInputModule,
     ReactiveFormsModule,
+    MdbDropdownModule,
   ],
   providers: [SizeDetectorService, SidebarService],
   bootstrap: [AppComponent],

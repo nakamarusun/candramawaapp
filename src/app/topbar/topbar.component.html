@@ -1,4 +1,7 @@
-<mat-toolbar class="bg-light d-flex flex-row ps-4" style="height: 72px">
+<mat-toolbar
+  class="bg-light d-flex flex-row ps-4 align-items-center mh-100"
+  style="height: 72px"
+>
   <button
     *ngIf="isHamVisible"
     mat-icon-button
@@ -9,4 +12,10 @@
     <mat-icon>menu</mat-icon>
   </button>
   <app-search></app-search>
+  <div
+    class="flex-grow-1 d-flex flex-row align-items-center justify-content-end"
+  >
+    <app-profile class=""></app-profile>
+    <h1>Testers</h1>
+  </div>
 </mat-toolbar>
